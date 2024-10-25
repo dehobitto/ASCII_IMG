@@ -17,6 +17,8 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.0-rc1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.0-rc1" />
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
     <PackageReference Include="OpenCvSharp4.Extensions" Version="4.10.0.20240616" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20240616" />

@@ -1,11 +1,16 @@
-﻿using static ASCII_CORE.App;
-namespace ASCII_CORE;
+﻿namespace ASCII_CORE;
 
-class Program
+internal class Program
 {
     static void Main()
     {
-        Start();
+        var app = new App();
+        while (true)
+        {
+            app.Start();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
     }
     
 }

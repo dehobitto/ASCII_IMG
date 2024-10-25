@@ -7,10 +7,9 @@ namespace ASCII_CORE;
 
 internal class App
 {
-    internal static void Start()
+    public void Start()
     {
-        VideoCapture capture = new VideoCapture(0);
-            
+        VideoCapture capture = new VideoCapture(@"C:\Users\Alex\Downloads\desktop-20240916-22590602_vS670iET.mp4");
         using (Mat image = new Mat()) // Frame image buffer
         {
             // When the movie playback reaches end, Mat.data becomes NULL.
@@ -18,7 +17,7 @@ internal class App
             {
                 capture.Read(image); // same as cvQueryFrame
                 if (image.Empty()) { break;}
-                    
+                
                 using (Bitmap bitmap = image.ToBitmap())
                 {
                     Draw(bitmap);

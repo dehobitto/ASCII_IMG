@@ -7,12 +7,12 @@ public class Graphics
 
     private static Bitmap ResizeBitmap(Bitmap bitmap)
     {
-        int maxWidth = Console.WindowWidth * 2 / 3;
-        double newHeight = bitmap.Height / WidthOffset * maxWidth / bitmap.Width;
+        int maxHeight = Console.WindowHeight * 2 / 3;
+        double newWidth = bitmap.Width * WidthOffset * maxHeight / bitmap.Height;
 
-        if (bitmap.Width > maxWidth || bitmap.Height > newHeight)
+        if (bitmap.Width > newWidth || bitmap.Height > maxHeight)
         {
-            bitmap = new Bitmap(bitmap, new Size(maxWidth, (int)newHeight));
+            bitmap = new Bitmap(bitmap, new Size((int)newWidth, maxHeight));
         }
 
         return bitmap;
